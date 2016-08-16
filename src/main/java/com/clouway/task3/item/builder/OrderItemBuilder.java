@@ -3,7 +3,7 @@ package com.clouway.task3.item.builder;
 /**
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
-public class OrderItemBuilder implements  ItemBuilder {
+public class OrderItemBuilder {
 
     private OrderItem item;
 
@@ -11,27 +11,26 @@ public class OrderItemBuilder implements  ItemBuilder {
         this.item = new OrderItem();
     }
 
-    @Override
-    public void buildProductName(String name) {
+    public OrderItemBuilder buildProductName(String name) {
         item.setProductName(name);
+        return this;
     }
 
-    @Override
-    public void buildMeasureUnit(String unit) {
+    public OrderItemBuilder buildMeasureUnit(String unit) {
         item.setMeasureUnit(unit);
+        return this;
     }
 
-    @Override
-    public void buildQuantity(Double quantity) {
+    public OrderItemBuilder buildQuantity(Double quantity) {
         item.setQuantity(quantity);
+        return this;
     }
 
-    @Override
-    public void buildPrice(Double price) {
+    public OrderItemBuilder buildPrice(Double price) {
         item.setPrice(price);
+        return this;
     }
 
-    @Override
     public OrderItem getItem() {
         return this.item;
     }

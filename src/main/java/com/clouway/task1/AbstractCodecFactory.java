@@ -3,7 +3,7 @@ package com.clouway.task1;
 /**
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
-public class CodecFactory {
+public class AbstractCodecFactory {
 
     public Codec createCodec(String codecType){
         if(codecType.equals("xml")){

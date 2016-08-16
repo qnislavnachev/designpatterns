@@ -8,14 +8,46 @@ import java.util.List;
 /**
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
-public interface OrderBuilder {
+public class OrderBuilder{
 
-    void buildOrderId(Long orderId);
-    void buildCustomerName(String name);
-    void buildCustomerAddress(String address);
-    void buildOrderCreationDate(Date date);
-    void buildOrderDeliveryDate(Date date);
-    void buildOrderItems(List<OrderItem> items);
-    Order getOrder();
+    private Order order;
+
+    public OrderBuilder(){
+        this.order = new Order();
+    }
+
+    public OrderBuilder buildOrderId(Long orderId) {
+        this.order.setOrderId(orderId);
+        return this;
+    }
+
+    public OrderBuilder buildCustomerName(String name) {
+        this.order.setCustomerName(name);
+        return  this;
+    }
+
+    public OrderBuilder buildCustomerAddress(String address) {
+        this.order.setCustomerAddress(address);
+        return  this;
+    }
+
+    public OrderBuilder buildOrderCreationDate(Date date) {
+        this.order.setOrderCreationDate(date);
+        return  this;
+    }
+
+    public OrderBuilder buildOrderDeliveryDate(Date date) {
+        this.order.setOrderDeliveryDate(date);
+        return  this;
+    }
+
+    public OrderBuilder buildOrderItems(List<OrderItem> items) {
+        this.order.setOrderItems(items);
+        return  this;
+    }
+
+    public Order build() {
+        return this.order;
+    }
 
 }

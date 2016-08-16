@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
-public class Order implements OrderPlan {
+public class Order {
 
     private Long orderId;
     private String customerName;
@@ -17,33 +17,26 @@ public class Order implements OrderPlan {
     private Date deliveryDate;
     private List<OrderItem> items;
 
-
-    @Override
     public void setOrderId(Long orderId) {
         this.orderId = orderId;
     }
 
-    @Override
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
 
-    @Override
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
     }
 
-    @Override
     public void setOrderCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
-    @Override
     public void setOrderDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
-    @Override
     public void setOrderItems(List<OrderItem> items) {
         this.items = items;
     }

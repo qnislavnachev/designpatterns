@@ -3,7 +3,7 @@ package com.clouway.task3.item.builder;
 /**
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
-public class OrderItem implements ItemPlan {
+public class OrderItem {
 
     private String productName;
     private String measureUnit;
@@ -11,23 +11,19 @@ public class OrderItem implements ItemPlan {
     private Double price;
 
 
-    @Override
     public void setProductName(String productName) {
         this.productName = productName;
     }
 
-    @Override
     public void setMeasureUnit(String measureUnit) {
         this.measureUnit = measureUnit;
 
     }
 
-    @Override
     public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 
-    @Override
     public void setPrice(double price) {
         this.price = price;
     }

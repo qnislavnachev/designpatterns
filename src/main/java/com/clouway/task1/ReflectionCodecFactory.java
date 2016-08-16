@@ -5,21 +5,13 @@ package com.clouway.task1;
  */
 public class ReflectionCodecFactory {
 
-    public Codec createCodec(String codecType) {
+    public Codec createCodec(String codecType) throws IllegalAccessException, InstantiationException {
         if (codecType.equals("xml")) {
             Class c = XMLCodec.class;
-            try {
-                return ((XMLCodec) c.newInstance());
-            } catch (InstantiationException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
+            return (XMLCodec) c.newInstance();
         } else if (codecType.equals("json")) {
             Class c = JSONCodec.class;
-            try {
-                return ((JSONCodec) c.newInstance());
-            } catch (InstantiationException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
+            return ((JSONCodec) c.newInstance());
         }
         return null;
     }

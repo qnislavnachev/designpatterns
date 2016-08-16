@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class SingletonTest {
 
     @Test
-    public void createSingleton(){
+    public void happyPath(){
         Singleton first = Singleton.getInstance();
         Singleton second = Singleton.getInstance();
         assertEquals(first.hashCode(), second.hashCode());

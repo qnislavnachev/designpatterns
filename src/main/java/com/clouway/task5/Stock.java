@@ -8,13 +8,14 @@ import java.util.List;
  */
 public class Stock {
 
-    private Observer observer = new MerchandiseObserver();
-    private Sold sold = new Sold(observer);
+    private Observer stockObserver = new MerchandiseObserver();
+    private Observer soldObserver = new MerchandiseObserver();
+    private Sold sold = new Sold(soldObserver);
     private List<Merchandise> available = new LinkedList();
 
     public void add(Merchandise merchandise){
         available.add(merchandise);
-        observer.update(merchandise, " was added!");
+        stockObserver.update(merchandise, " was added!");
     }
 
     public void sell(Merchandise merchandise){
