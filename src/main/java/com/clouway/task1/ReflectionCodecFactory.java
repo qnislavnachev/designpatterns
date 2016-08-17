@@ -5,12 +5,12 @@ package com.clouway.task1;
  */
 public class ReflectionCodecFactory implements CodecFactory {
 
-    public Codec createCodec(String codecType) {
+    public Codec create(String type) {
         try {
-            if (codecType.equals("xml")) {
+            if (type.equals("xml")) {
                 Class c = XMLCodec.class;
                 return (XMLCodec) c.newInstance();
-            } else if (codecType.equals("json")) {
+            } else if (type.equals("json")) {
                 Class c = JSONCodec.class;
                 return ((JSONCodec) c.newInstance());
             }

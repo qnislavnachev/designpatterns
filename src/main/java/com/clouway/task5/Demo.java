@@ -9,6 +9,7 @@ public class Demo {
         Merchandise jeans = new Merchandise("Jeans", 3, 35.90);
         Merchandise shirts = new Merchandise("Shirts", 5, 10.50);
         Merchandise belts = new Merchandise("Belts", 2, 22.80);
+
         Stock stock = new Stock();
 
         stock.add(jeans);

@@ -4,7 +4,5 @@ package com.clouway.task1;
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
 public interface CodecFactory {
-
-    Codec createCodec(String codecType);
-
+    Codec create(String type);
 }

@@ -5,10 +5,10 @@ package com.clouway.task1;
  */
 public class RegularCodecFactory implements CodecFactory {
     @Override
-    public Codec createCodec(String codecType) {
-        if (codecType.equals("xml")) {
+    public Codec create(String type) {
+        if (type.equals("xml")) {
             return new XMLCodec();
-        } else if (codecType.equals("json")) {
+        } else if (type.equals("json")) {
             return new JSONCodec();
         }
         return null;
