@@ -3,5 +3,8 @@ package com.clouway.task1;
 /**
  * @author Borislav Gadjev <gadjevb@gmail.com>
  */
-public class JSONCodec implements Codec {
+public interface CodecFactory {
+
+    Codec createCodec(String codecType);
+
 }

@@ -11,7 +11,7 @@ public class Singleton {
         System.out.println("Singleton created!");
     }
 
-    public synchronized static Singleton getInstance(){
+    public static Singleton getInstance(){
 
         if(instance == null){
             instance = new Singleton();

@@ -23,7 +23,7 @@ public class Sold {
     public void statistic(){
         System.out.println("SOLD:");
         for (Merchandise each: sold) {
-            System.out.println("Merchandise:" + each.getName() + " Quantity:" + each.getQuantity() + " Price:" + each.getPrice());
+            System.out.println("Merchandise:" + each.name + " Quantity:" + each.quantity + " Price:" + each.price);
         }
     }
 

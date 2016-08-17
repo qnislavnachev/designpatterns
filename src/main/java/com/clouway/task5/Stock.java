@@ -31,7 +31,7 @@ public class Stock {
     public void statistic(){
         System.out.println("AVAILABLE:");
         for (Merchandise each: available) {
-            System.out.println("Merchandise:" + each.getName() + " Quantity:" + each.getQuantity() + " Price:" + each.getPrice());
+            System.out.println("Merchandise:" + each.name + " Quantity:" + each.quantity + " Price:" + each.price);
         }
         sold.statistic();
     }

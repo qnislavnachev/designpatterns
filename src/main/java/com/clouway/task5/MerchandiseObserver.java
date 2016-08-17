@@ -6,6 +6,6 @@ package com.clouway.task5;
 public class MerchandiseObserver implements Observer {
     @Override
     public void update(Merchandise merchandise, String message) {
-        System.out.println("Merchandise:" + merchandise.getName() + " of quantity:" + merchandise.getQuantity() + " with price:" + merchandise.getPrice() + message);
+        System.out.println("Merchandise:" + merchandise.name + " of quantity:" + merchandise.quantity + " with price:" + merchandise.price + message);
     }
 }
