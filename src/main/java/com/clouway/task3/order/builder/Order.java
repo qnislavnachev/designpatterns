@@ -2,6 +2,7 @@ package com.clouway.task3.order.builder;
 
 import com.clouway.task3.item.builder.OrderItem;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -10,12 +11,12 @@ import java.util.List;
  */
 public class Order {
 
-    private Long orderId;
-    private String customerName;
-    private String customerAddress;
-    private Date creationDate;
-    private Date deliveryDate;
-    private List<OrderItem> items;
+    private Long orderId = 0000000000L;
+    private String customerName = "none";
+    private String customerAddress = "none";
+    private Date creationDate = new Date();
+    private Date deliveryDate = new Date();
+    private List<OrderItem> items = new ArrayList();
 
     public void setOrderId(Long orderId) {
         this.orderId = orderId;
