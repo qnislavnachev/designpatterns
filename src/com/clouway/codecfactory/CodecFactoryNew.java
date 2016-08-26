@@ -3,7 +3,7 @@ package com.clouway.codecfactory;
 /**
  * @author Vasil Mitov <v.mitov.clouway@gmail.com>
  */
-public class CodecFactoryNew extends AbstractFactory {
+public class CodecFactoryNew  implements CodecFactory {
   public Codec getCodec(String type) {
     if (type == null) {
       return null;

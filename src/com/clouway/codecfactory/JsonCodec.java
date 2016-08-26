@@ -30,6 +30,4 @@ public class JsonCodec implements Codec {
     }
     return null;
   }
-
-
 }
