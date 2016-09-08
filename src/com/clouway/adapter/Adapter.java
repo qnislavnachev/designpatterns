@@ -1,3 +1,5 @@
+package com.clouway.adapter;
+
 import java.io.IOException;
 
 /**
