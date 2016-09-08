@@ -7,6 +7,5 @@ public class Adapter implements Interface {
   @Override
   public int read(byte[] buf, int offset, int length) throws IOException {
     return new InStream().read();
-
   }
 }
