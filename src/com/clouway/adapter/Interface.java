@@ -7,5 +7,5 @@ import java.io.IOException;
  */
 public interface Interface {
   public int read(byte[] buf, int offset, int length) throws IOException;
-  
+
 }
