@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author Vasil Mitov <v.mitov.clouway@gmail.com>
  */
-public class OrderBuilder {
+public class  OrderBuilder {
   private Long orderId;
   private String customerName;
   private String customerAddress;
