@@ -16,11 +16,4 @@ public final class OrderItem {
     this.quantity = quantity;
     this.price = price;
   }
-
-  //  public OrderItem(OrderItemBuilder orderItemBuilder){
-//    productName= orderItemBuilder.getProductName();
-//    measureUnit= orderItemBuilder.getMeasureUnit();
-//    quantity= orderItemBuilder.getQuantity();
-//    price= orderItemBuilder.getPrice();
-//  }
 }

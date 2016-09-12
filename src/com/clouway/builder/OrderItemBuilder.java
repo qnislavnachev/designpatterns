@@ -4,7 +4,6 @@ package com.clouway.builder;
  * @author Vasil Mitov <v.mitov.clouway@gmail.com>
  */
 public class OrderItemBuilder {
-  //To do put default value
   private String productName = "name";
   private String measureUnit = "kg";
   private Double quantity = 0.0;

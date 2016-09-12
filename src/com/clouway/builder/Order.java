@@ -14,12 +14,12 @@ public final class Order {
   private Date orderDeliveryDate;
   private List<OrderItem> items;
 
-  public Order(OrderBuilder orderBuilder) {
-    orderId=orderBuilder.getOrderId();
-    customerName=orderBuilder.getCustomerName();
-    customerAddress=orderBuilder.getCustomerAddress();
-    orderCreationDate=orderBuilder.getOrderCreationDate();
-    orderDeliveryDate=orderBuilder.getOrderDeliveryDate();
-    items=orderBuilder.getItems();
+  public Order(Long orderId, String customerName, String customerAddress, Date orderCreationDate, Date orderDeliveryDate, List<OrderItem> items) {
+    this.orderId = orderId;
+    this.customerName = customerName;
+    this.customerAddress = customerAddress;
+    this.orderCreationDate = orderCreationDate;
+    this.orderDeliveryDate = orderDeliveryDate;
+    this.items = items;
   }
 }
