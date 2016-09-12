@@ -1,5 +1,6 @@
 package com.clouway.builder;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -10,9 +11,9 @@ public class OrderBuilder {
   private Long orderId = 0l;
   private String customerName = "Customer";
   private String customerAddress = "Home";
-  private Date orderCreationDate = null;
-  private Date orderDeliveryDate = null;
-  private List<OrderItem> items;
+  private Date orderCreationDate = new Date(0);
+  private Date orderDeliveryDate = new Date(0);
+  private List<OrderItem> items=new ArrayList<>();
 
   public OrderBuilder() {
   }
