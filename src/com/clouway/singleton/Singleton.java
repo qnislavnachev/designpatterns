@@ -1,7 +1,4 @@
-package com.clouway;
-
-import java.util.LinkedList;
-import java.util.List;
+package com.clouway.singleton;
 
 /**
  * @author Vasil Mitov <v.mitov.clouway@gmail.com>

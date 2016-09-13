@@ -1,4 +1,4 @@
-package com.clouway;
+package com.clouway.singleton;
 
 /**
  * @author Vasil Mitov <v.mitov.clouway@gmail.com>
