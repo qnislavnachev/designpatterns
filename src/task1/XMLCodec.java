@@ -2,7 +2,8 @@ package task1;
 
 public class XMLCodec implements Codec {
 
-    public void show(){
+    @Override
+    public void show() {
         System.out.println("I am XML");
     }
 }

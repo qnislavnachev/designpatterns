@@ -9,20 +9,21 @@ public class RefFactory implements Factory {
         if (codec == null) {
             return null;
         }
+
+        if ("JSON".equals(codec))
+            clazz = JSONCodec.class;
+        try {
+            return (JSONCodec) clazz.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
         if ("XML".equals(codec)) {
             clazz = XMLCodec.class;
             try {
                 return (XMLCodec) clazz.newInstance();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
-        if ("JSON".equals(codec)) {
-            clazz = JSONCodec.class;
-            try {
-                return (JSONCodec) clazz.newInstance();
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {

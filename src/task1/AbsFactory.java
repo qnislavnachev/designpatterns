@@ -7,11 +7,11 @@ public class AbsFactory implements Factory {
         if (codec == null) {
             return null;
         }
-        if ("XML".equals(codec)) {
-            return new XMLCodec();
-        }
         if ("JSON".equals(codec)) {
             return new JSONCodec();
+        }
+        if ("XML".equals(codec)) {
+            return new XMLCodec();
         }
         return null;
     }
