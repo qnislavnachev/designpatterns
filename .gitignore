@@ -6,6 +6,11 @@ out/
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+#MyIgnore
+.idea
+*.iml
+*.xml
+
 # Package Files #
 *.jar
 *.war
