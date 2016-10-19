@@ -1,11 +1,11 @@
 package task1;
 
-public class XMLCodecFactoryRef implements CodecFactory {
+public class JSONCodecReflectionFactory implements CodecFactory {
 
     @Override
     public Codec create() {
         try {
-            Class clazz = XMLCodec.class;
+            Class clazz = JSONCodec.class;
             return (Codec) clazz.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();

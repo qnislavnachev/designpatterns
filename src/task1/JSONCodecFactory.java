@@ -1,6 +1,6 @@
 package task1;
 
-public class JSONCodecFactoryBasic implements CodecFactory {
+public class JSONCodecFactory implements CodecFactory {
 
     @Override
     public Codec create() {

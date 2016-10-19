@@ -1,6 +1,6 @@
 package task1;
 
-public class XMLCodecFactoryBasic implements CodecFactory {
+public class XMLCodecFactory implements CodecFactory {
 
     @Override
     public Codec create() {
