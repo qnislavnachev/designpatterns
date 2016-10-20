@@ -6,7 +6,7 @@ public class OrderItem {
     private Double quantity;
     private Double price;
 
-    public static class OrderItemBuilder{
+    public static class OrderItemBuilder {
         private String productName;
         private String measureUnit;
         private Double quantity;
@@ -32,10 +32,6 @@ public class OrderItem {
             return this;
         }
 
-        public OrderItem build() {
-            return new OrderItem(this);
-        }
-
         public String getProductName() {
             return productName;
         }
@@ -51,13 +47,21 @@ public class OrderItem {
         public Double getPrice() {
             return price;
         }
+
+        public OrderItem build() {
+            return new OrderItem(this);
+        }
     }
 
-    public OrderItem(OrderItemBuilder builder) {
+    private OrderItem(OrderItemBuilder builder) {
         this.productName = builder.getProductName();
         this.measureUnit = builder.getMeasureUnit();
         this.quantity = builder.getQuantity();
         this.price = builder.getPrice();
+    }
+
+    public static OrderItemBuilder newItem() {
+        return new OrderItemBuilder();
     }
 
     public String getProductName() {

@@ -52,10 +52,6 @@ public class Order {
             return this;
         }
 
-        public Order build() {
-            return new Order(this);
-        }
-
         public Long getOrderId() {
             return orderId;
         }
@@ -79,15 +75,23 @@ public class Order {
         public List<OrderItem> getItems() {
             return items;
         }
+
+        public Order build() {
+            return new Order(this);
+        }
     }
 
-    public Order(OrderBuilder builder) {
+    private Order(OrderBuilder builder) {
         this.orderId = builder.getOrderId();
         this.customerName = builder.getCustomerName();
         this.customerAddress = builder.getCustomerAddress();
         this.orderCreationDate = builder.getOrderCreationDate();
         this.orderDeliveryDate = builder.getOrderDeliveryDate();
         this.items = builder.getItems();
+    }
+
+    public static OrderBuilder newItem(){
+        return new OrderBuilder();
     }
 
     public Long getOrderId() {

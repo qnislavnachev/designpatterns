@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class BuilderTest {
@@ -18,11 +19,19 @@ public class BuilderTest {
     @Before
     public void setUp() throws Exception {
         List<OrderItem> list = new ArrayList<>();
-        item = new OrderItem.OrderItemBuilder().productName("product").price(10.00).build();
+        item = OrderItem.newItem()
+                .productName("name")
+                .price(10.00)
+                .build();
         list.add(item);
         Date creationDate = new Date(2016, 12, 5);
         Date deliveryDate = new Date(2016, 12, 10);
-        order = new Order.OrderBuilder().customerName("name").items(list).creationDate(creationDate).deliveryDate(deliveryDate).build();
+        order = Order.newItem()
+                .customerName("name")
+                .items(list)
+                .creationDate(creationDate)
+                .deliveryDate(deliveryDate)
+                .build();
     }
 
     private boolean isOnTime(Order order, int days) {
@@ -34,8 +43,22 @@ public class BuilderTest {
         return false;
     }
 
+    private boolean hasItems(Order order) {
+        return order.getItems().size() != 0;
+    }
+
     @Test
     public void deliveryOnTime() throws Exception {
         assertTrue(isOnTime(order, 10));
+    }
+
+    @Test
+    public void deliveryLate() throws Exception {
+        assertFalse(isOnTime(order, 3));
+    }
+
+    @Test
+    public void orderHasItems() throws Exception {
+        assertTrue(hasItems(order));
     }
 }
