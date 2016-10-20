@@ -10,12 +10,7 @@ public class InputStreamAdapter implements StreamReader {
     }
 
     @Override
-    public int read(byte[] data, int off, int length) {
-        try {
-            return reader.read(data, off, length);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return 0;
+    public int read(byte[] data, int off, int length) throws IOException {
+        return reader.read(data, off, length);
     }
 }
